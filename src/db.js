@@ -25,7 +25,7 @@ const sequelize =
       })
     : new Sequelize(
         `${DB}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,
-        { logging: false, native: false }
+        { logging: false, native: false, ssl: true, }
       );
 
 // Reads all the files in models folder,
